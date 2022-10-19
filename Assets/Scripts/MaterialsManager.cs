@@ -12,8 +12,7 @@ public class MaterialsManager : MonoBehaviour
         for(int i = 0; i < _materials.Count; i++)
         {
             Vector3 startPos = _spawners[i].transform.position;
-            startPos.y += 1f;
-            Instantiate(_materials[i], startPos, _spawners[i].transform.rotation);
+            Instantiate(_materials[i], startPos, Quaternion.identity);
 
         }
 
