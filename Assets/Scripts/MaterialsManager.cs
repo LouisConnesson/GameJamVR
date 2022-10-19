@@ -9,7 +9,14 @@ public class MaterialsManager : MonoBehaviour
     [SerializeField] private List<GameObject> _spawners = new List<GameObject>();
     void Start()
     {
-        
+        for(int i = 0; i < _materials.Count; i++)
+        {
+            Vector3 startPos = _spawners[i].transform.position;
+            startPos.y += 1f;
+            Instantiate(_materials[i], startPos, _spawners[i].transform.rotation);
+
+        }
+
     }
 
     // Update is called once per frame
