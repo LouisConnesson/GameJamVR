@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5170205512799406354}
   m_Layer: 0
   m_Name: MagicStaff
-  m_TagString: Untagged
+  m_TagString: MagicStaff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

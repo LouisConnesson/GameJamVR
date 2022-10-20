@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 4588909197652489407}
   m_Layer: 0
   m_Name: Helmet
-  m_TagString: Untagged
+  m_TagString: Helmet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
