@@ -16,11 +16,19 @@ public class Tutorial : MonoBehaviour
     {
         
     }
+    public void FirstStepFinished()
+    {
+        gameObjects[0].SetActive(false);
+        gameObjects[1].SetActive(true);
+    }
+    public void SecondStepFinished()
+    {
+        gameObjects[1].SetActive(false);
+        gameObjects[2].SetActive(true);
+    }
     public void TutorialFinished()
     {
-        foreach (GameObject go in gameObjects)
-        {
-            go.GetComponent<Outline>().OutlineWidth = 0;
-        }
+        gameObjects[2].SetActive(false);
+
     }
 }
