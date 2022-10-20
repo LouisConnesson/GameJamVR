@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BlueCrystal
-  - Emerald
-  - Iron
   - Gold
+  - Iron
   - Copper
+  - Emerald
+  - BlueCrystal
   layers:
   - Default
   - TransparentFX
