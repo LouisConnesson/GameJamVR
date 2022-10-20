@@ -17,7 +17,7 @@ public class OrdersManager : MonoBehaviour
         if(currentObject.GetComponent<Rigidbody>())
             currentObject.GetComponent<Rigidbody>().useGravity = false;
         if (currentObject.GetComponent<Outline>())
-            currentObject.GetComponent<Outline>().OutlineWidth = 8;
+            currentObject.GetComponent<Outline>().OutlineWidth = 5;
        currentOrder = 0;
     }
 
@@ -25,17 +25,25 @@ public class OrdersManager : MonoBehaviour
     private void NewOrder()
     {
         int newOrder = Random.Range(0, gameObjects.Count);
-        Instantiate(gameObjects[newOrder], orderSpawner.transform.position, Quaternion.identity);
+        currentObject = Instantiate(gameObjects[newOrder], orderSpawner.transform.position, Quaternion.identity);
+        if (currentObject.GetComponent<Rigidbody>())
+            currentObject.GetComponent<Rigidbody>().useGravity = false;
+        if (currentObject.GetComponent<Outline>())
+            currentObject.GetComponent<Outline>().OutlineWidth = 5;
 
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == gameObjects[currentOrder].tag)
         {
+            Debug.Log("ojbet bon");
             score += 1;
-            Destroy(other);
-            Destroy(currentObject);
+            Destroy(other.gameObject    );
+            Destroy(currentObject.gameObject) ;
             NewOrder();
         }
+        else
+            Debug.Log("ojbet pas bon");
+
     }
 }
