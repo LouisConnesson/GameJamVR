@@ -6,6 +6,8 @@ public class Crafting : MonoBehaviour
 {
     private int[] values = new int[9];
     private string[] types = new string[9];
+    public List<GameObject> listObject = new List<GameObject>();
+    public GameObject particleWeapon;
     private void Start()
     {
         foreach (int value in values)
@@ -21,29 +23,57 @@ public class Crafting : MonoBehaviour
         {
             if (types[4] == "Iron" && types[5] == "Gold")
             {
-               Debug.Log("CraftSword");
+                Debug.Log("CraftSword");
+                particleWeapon.SetActive(true);
+                listObject[4].SetActive(true);
             }
             else if (types[4] == "Copper" && types[1] == "Iron" && types[7] == "Iron" && types[5] == "Iron")
             {
                 Debug.Log("CraftShield");
+                particleWeapon.SetActive(true);
+                listObject[6].SetActive(true);
             }
         }
         else if (types[3] == "Copper")
         {
             if (types[0] == "Copper" && types[6] == "Copper" && types[1] == "Iron" && types[7] == "Iron")
+            {
                 Debug.Log("CraftHelmet");
+                particleWeapon.SetActive(true);
+                listObject[0].SetActive(true);
+            }
             else if (types[1] == "Iron" && types[4] == "BlueCrystal" && types[7] == "Iron" && types[2] == "Iron" && types[5] == "Iron" && types[8] == "Iron")
+            {
                 Debug.Log("CraftChestplate");
+                particleWeapon.SetActive(true);
+                listObject[2].SetActive(true);
+            }
         }
         else if (types[2] == "Iron" && types[8] == "Iron")
         {
-            if(types[1] == "Iron" && types[7] == "Iron" && types[0] == "Emerald" && types[6] == "Emerald" && types[3] == "Gold")
+            if (types[1] == "Iron" && types[7] == "Iron" && types[0] == "Emerald" && types[6] == "Emerald" && types[3] == "Gold")
+            {
                 Debug.Log("CraftPants");
+                particleWeapon.SetActive(true);
+                listObject[3].SetActive(true);
+            }
             else if (types[1] == "Copper" && types[7] == "Copper")
+            {
                 Debug.Log("CraftBoots");
+                particleWeapon.SetActive(true);
+                listObject[1].SetActive(true);
+            }
         }
         else if (types[0] == "Emerald" && types[6] == "Emerald" && types[3] == "BlueCrystal" && types[4] == "Copper" && types[5] == "Copper")
+        {
             Debug.Log("CraftMagicStaff");
+            particleWeapon.SetActive(true);
+            listObject[5].SetActive(true);
+        }
+        else
+        {
+            particleWeapon.SetActive(false);
+        }
         /*
         if (values[5] == 1)
         {
