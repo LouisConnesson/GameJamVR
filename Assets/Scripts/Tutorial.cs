@@ -8,10 +8,10 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private List<GameObject> gameObjects = new List<GameObject>();
     void Start()
     {
-        foreach(GameObject go in gameObjects)
+        /*foreach(GameObject go in gameObjects)
         {
             go.GetComponent<Outline>().OutlineWidth = 10;
-        }
+        }*/
     }
 
     // Update is called once per frame
