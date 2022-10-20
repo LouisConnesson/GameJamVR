@@ -6,7 +6,6 @@ public class Tutorial : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private List<GameObject> gameObjects = new List<GameObject>();
-    private bool isTutorialFinish = false;
     void Start()
     {
         foreach(GameObject go in gameObjects)
