@@ -16,6 +16,7 @@ TagManager:
   - Chestplate
   - MagicStaff
   - Boots
+  - Key
   layers:
   - Default
   - TransparentFX

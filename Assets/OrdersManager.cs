@@ -16,6 +16,7 @@ public class OrdersManager : MonoBehaviour
     [SerializeField] private AudioSource audioVictory;
     [SerializeField] private TMP_Text scoreUI;
     [SerializeField] private GameObject menu;
+    [SerializeField] private float gameTime = 10f;
 
     [SerializeField] private bool isFinish = false;
   void Start()
@@ -26,15 +27,24 @@ public class OrdersManager : MonoBehaviour
         if (currentObject.GetComponent<Outline>())
             currentObject.GetComponent<Outline>().OutlineWidth = 5;
        currentOrder = 0;
-
+        gameTime = 10f;
         StartCoroutine("Finish");
 
     }
 
     private void Update()
     {
+        if (isFinish)
+        {
+            menu.SetActive(true);
+            if (currentObject != null)
+                Destroy(currentObject);
+        }
+        else
+            menu.SetActive(false);
+
         scoreUI.text = score.ToString();
-        if (currentObject)
+        if (currentObject && !isFinish)
         {
             if (currentObject.tag == "Sword")
             {
@@ -170,7 +180,7 @@ public class OrdersManager : MonoBehaviour
 
     private IEnumerator Finish()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(gameTime);
         isFinish = true;
         Debug.Log("FIN PARTIE");
     }
@@ -186,19 +196,17 @@ public class OrdersManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == currentObject.tag)
+        if(other.tag == currentObject.tag && !isFinish)
         {
             audioVictory.Play();
             GetComponent<Tutorial>().TutorialFinished();
-            Debug.Log("ojbet bon");
             score += 1;
             Destroy(other.gameObject    );
             Destroy(currentObject.gameObject) ;
             chestParticle.Play();
             NewOrder();
         }
-        else
-            Debug.Log("ojbet pas bon");
+        
 
     }
 }
