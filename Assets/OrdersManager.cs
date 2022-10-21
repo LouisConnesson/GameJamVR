@@ -15,19 +15,25 @@ public class OrdersManager : MonoBehaviour
     [SerializeField] private ParticleSystem chestParticle;
     [SerializeField] private AudioSource audioVictory;
     [SerializeField] private TMP_Text scoreUI;
-    [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject retry;
+    [SerializeField] private GameObject retryUI;
+    [SerializeField] private GameObject adminMenu;
+    [SerializeField] private GameObject adminMenuUI;
     [SerializeField] private float gameTime = 10f;
 
     [SerializeField] private bool isFinish = false;
   void Start()
     {
+        retry.SetActive(false);
+        retryUI.SetActive(false);
+        adminMenu.SetActive(false);
+        adminMenuUI.SetActive(false);
         currentObject =  Instantiate(gameObjects[0], orderSpawner.transform.position, Quaternion.Euler(0,-90f,0));
         if(currentObject.GetComponent<Rigidbody>())
             currentObject.GetComponent<Rigidbody>().useGravity = false;
         if (currentObject.GetComponent<Outline>())
             currentObject.GetComponent<Outline>().OutlineWidth = 5;
        currentOrder = 0;
-        gameTime = 10f;
         StartCoroutine("Finish");
 
     }
@@ -36,12 +42,12 @@ public class OrdersManager : MonoBehaviour
     {
         if (isFinish)
         {
-            menu.SetActive(true);
+            retry.SetActive(true);
+            retryUI.SetActive(true);
             if (currentObject != null)
                 Destroy(currentObject);
         }
-        else
-            menu.SetActive(false);
+       
 
         scoreUI.text = score.ToString();
         if (currentObject && !isFinish)
@@ -196,7 +202,12 @@ public class OrdersManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == currentObject.tag && !isFinish)
+        if(other.tag == "Key")
+        {
+            adminMenu.SetActive(true);
+            adminMenuUI.SetActive(true);
+        }
+        else if(other.tag == currentObject.tag && !isFinish)
         {
             audioVictory.Play();
             GetComponent<Tutorial>().TutorialFinished();
