@@ -26,5 +26,6 @@ public class MaterialsManager : MonoBehaviour
     public void InstantiateMaterial(int index)
     {
         Instantiate(_materials[index], _spawners[index].transform.position,_spawners[index].transform.rotation);
+        GetComponent<Tutorial>().FirstStepFinished();
     }
 }

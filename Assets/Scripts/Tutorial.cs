@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private List<GameObject> gameObjects = new List<GameObject>();
     void Start()
     {
-       
+        if( gameObjects.Count >= 3)
+        {
+            gameObjects[1].SetActive(false);
+            gameObjects[2].SetActive(false);
+        }
+      
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
     public void FirstStepFinished()
     {
         gameObjects[0].SetActive(false);
