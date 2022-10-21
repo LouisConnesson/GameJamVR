@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR.Interaction.Toolkit;
 public class Crafting : MonoBehaviour
 {
     private int[] values = new int[9];
     private string[] types = new string[9];
     public List<GameObject> listObject = new List<GameObject>();
+    public List<GameObject> spawners = new List<GameObject>();
     public GameObject particleWeapon;
     public GameObject spawner;
     private bool flag = false;
@@ -23,7 +24,24 @@ public class Crafting : MonoBehaviour
     {
         if (flag == true)
         {
-            GetComponent<Tutorial>().SecondStepFinished();
+            GameObject[] del = GameObject.FindGameObjectsWithTag("Gold");
+            foreach(GameObject del2 in del) 
+                Destroy(del2);
+
+            del = GameObject.FindGameObjectsWithTag("Iron");
+            foreach (GameObject del2 in del)
+                Destroy(del2);
+
+            del = GameObject.FindGameObjectsWithTag("Copper");
+            foreach (GameObject del2 in del)
+                Destroy(del2);
+
+            del = GameObject.FindGameObjectsWithTag("Emerald");
+            foreach (GameObject del2 in del)
+                Destroy(del2);
+            del = GameObject.FindGameObjectsWithTag("BlueCrystal");
+            foreach (GameObject del2 in del)
+                Destroy(del2);
         }
         if (types[3] == "Iron")
         {

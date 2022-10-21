@@ -6,6 +6,7 @@ public class Tutorial : MonoBehaviour
 {
     [SerializeField] private List<GameObject> gameObjects = new List<GameObject>();
     private bool firstCall = false;
+    private bool secondCall = false;
     void Start()
     {
         if( gameObjects.Count >= 3)
@@ -23,11 +24,11 @@ public class Tutorial : MonoBehaviour
     }
     public void SecondStepFinished()
     {
-        if(firstCall == false)
+        if(secondCall == false)
         {
             gameObjects[1].SetActive(false);
             gameObjects[2].SetActive(true);
-            firstCall = true;
+            secondCall = true;
 
         }
 
