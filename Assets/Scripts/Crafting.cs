@@ -8,6 +8,7 @@ public class Crafting : MonoBehaviour
     private string[] types = new string[9];
     public List<GameObject> listObject = new List<GameObject>();
     public GameObject particleWeapon;
+    private bool flag = false;
     private void Start()
     {
         foreach (int value in values)
@@ -25,13 +26,21 @@ public class Crafting : MonoBehaviour
             {
                 Debug.Log("CraftSword");
                 particleWeapon.SetActive(true);
-                listObject[4].SetActive(true);
+                if (flag == false)
+                {
+                    Instantiate(listObject[4], this.transform);
+                    flag = true;
+                }
             }
             else if (types[4] == "Copper" && types[1] == "Iron" && types[7] == "Iron" && types[5] == "Iron")
             {
                 Debug.Log("CraftShield");
                 particleWeapon.SetActive(true);
-                listObject[6].SetActive(true);
+                if (flag == false)
+                {
+                    Instantiate(listObject[6], this.transform);
+                    flag = true;
+                }
             }
         }
         else if (types[3] == "Copper")
@@ -40,13 +49,22 @@ public class Crafting : MonoBehaviour
             {
                 Debug.Log("CraftHelmet");
                 particleWeapon.SetActive(true);
-                listObject[0].SetActive(true);
+                if (flag == false)
+                {
+                    Instantiate(listObject[0], this.transform);
+                    flag = true;
+                }
             }
             else if (types[1] == "Iron" && types[4] == "BlueCrystal" && types[7] == "Iron" && types[2] == "Iron" && types[5] == "Iron" && types[8] == "Iron")
             {
                 Debug.Log("CraftChestplate");
                 particleWeapon.SetActive(true);
-                listObject[2].SetActive(true);
+                if (flag == false)
+                {
+                    Instantiate(listObject[2], this.transform);
+                    flag = true;
+
+                }
             }
         }
         else if (types[2] == "Iron" && types[8] == "Iron")
@@ -55,24 +73,37 @@ public class Crafting : MonoBehaviour
             {
                 Debug.Log("CraftPants");
                 particleWeapon.SetActive(true);
-                listObject[3].SetActive(true);
-            }
+                if (flag == false)
+                {
+                    Instantiate(listObject[3], this.transform);
+                    flag = true;
+                 }
+             }
             else if (types[1] == "Copper" && types[7] == "Copper")
             {
                 Debug.Log("CraftBoots");
                 particleWeapon.SetActive(true);
-                listObject[1].SetActive(true);
+                if (flag == false)
+                {
+                    Instantiate(listObject[1], this.transform);
+                    flag = true;
+                }
             }
         }
         else if (types[0] == "Emerald" && types[6] == "Emerald" && types[3] == "BlueCrystal" && types[4] == "Copper" && types[5] == "Copper")
         {
             Debug.Log("CraftMagicStaff");
             particleWeapon.SetActive(true);
-            listObject[5].SetActive(true);
+            if (flag == false)
+            {
+                Instantiate(listObject[5], this.transform);
+                flag = true;
+            }
         }
         else
         {
             particleWeapon.SetActive(false);
+            flag = false;
         }
         /*
         if (values[5] == 1)
