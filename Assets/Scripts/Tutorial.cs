@@ -11,6 +11,8 @@ public class Tutorial : MonoBehaviour
     {
         if( gameObjects.Count >= 3)
         {
+            gameObjects[1].SetActive(true);
+
             gameObjects[1].SetActive(false);
             gameObjects[2].SetActive(false);
         }

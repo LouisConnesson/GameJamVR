@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OrdersManager : MonoBehaviour
 {
@@ -12,8 +13,12 @@ public class OrdersManager : MonoBehaviour
     //[SerializeField] private bool isOrderFinish = false;
     [SerializeField] private int score = 0;
     [SerializeField] private ParticleSystem chestParticle;
+    [SerializeField] private AudioSource audioVictory;
+    [SerializeField] private TMP_Text scoreUI;
+    [SerializeField] private GameObject menu;
 
-    void Start()
+    [SerializeField] private bool isFinish = false;
+  void Start()
     {
         currentObject =  Instantiate(gameObjects[0], orderSpawner.transform.position, Quaternion.Euler(0,-90f,0));
         if(currentObject.GetComponent<Rigidbody>())
@@ -21,10 +26,14 @@ public class OrdersManager : MonoBehaviour
         if (currentObject.GetComponent<Outline>())
             currentObject.GetComponent<Outline>().OutlineWidth = 5;
        currentOrder = 0;
+
+        StartCoroutine("Finish");
+
     }
 
     private void Update()
     {
+        scoreUI.text = score.ToString();
         if (currentObject)
         {
             if (currentObject.tag == "Sword")
@@ -158,6 +167,13 @@ public class OrdersManager : MonoBehaviour
         }
        
     }
+
+    private IEnumerator Finish()
+    {
+        yield return new WaitForSeconds(10);
+        isFinish = true;
+        Debug.Log("FIN PARTIE");
+    }
     private void NewOrder()
     {
         int newOrder = Random.Range(0, gameObjects.Count);
@@ -172,6 +188,7 @@ public class OrdersManager : MonoBehaviour
     {
         if(other.tag == currentObject.tag)
         {
+            audioVictory.Play();
             GetComponent<Tutorial>().TutorialFinished();
             Debug.Log("ojbet bon");
             score += 1;
