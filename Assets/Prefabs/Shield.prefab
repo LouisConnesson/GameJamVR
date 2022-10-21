@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6755700861812608705}
   - component: {fileID: 5793716034506835615}
   - component: {fileID: 2536113621466574992}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shield
   m_TagString: Shield
   m_Icon: {fileID: 0}
@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3501442670408233801}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.644, y: 1.062, z: 0.346}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 0.094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 3501442670408265581}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!114 &4675309655913309798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 3501442670408265579}
   - component: {fileID: 3501442670409035595}
   - component: {fileID: 3501442670410165643}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Shield_06_a_body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 3501442670408265581}
   - component: {fileID: 3501442670409035597}
   - component: {fileID: 3501442670410165645}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PT_Medieval_Shield_06_a_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

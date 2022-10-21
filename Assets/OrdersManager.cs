@@ -11,6 +11,7 @@ public class OrdersManager : MonoBehaviour
     [SerializeField] private int currentOrder = 0;
     //[SerializeField] private bool isOrderFinish = false;
     [SerializeField] private int score = 0;
+    [SerializeField] private ParticleSystem chestParticle;
 
     void Start()
     {
@@ -174,6 +175,7 @@ public class OrdersManager : MonoBehaviour
             score += 1;
             Destroy(other.gameObject    );
             Destroy(currentObject.gameObject) ;
+            chestParticle.Play();
             NewOrder();
         }
         else
