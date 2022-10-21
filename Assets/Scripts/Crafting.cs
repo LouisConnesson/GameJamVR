@@ -8,6 +8,7 @@ public class Crafting : MonoBehaviour
     private string[] types = new string[9];
     public List<GameObject> listObject = new List<GameObject>();
     public GameObject particleWeapon;
+    public GameObject spawner;
     private bool flag = false;
     private void Start()
     {
@@ -20,6 +21,10 @@ public class Crafting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (flag == true)
+        {
+            GetComponent<Tutorial>().SecondStepFinished();
+        }
         if (types[3] == "Iron")
         {
             if (types[4] == "Iron" && types[5] == "Gold")
@@ -28,7 +33,7 @@ public class Crafting : MonoBehaviour
                 particleWeapon.SetActive(true);
                 if (flag == false)
                 {
-                    Instantiate(listObject[4], this.transform);
+                    Instantiate(listObject[4], spawner.transform);
                     flag = true;
                 }
             }
@@ -38,7 +43,7 @@ public class Crafting : MonoBehaviour
                 particleWeapon.SetActive(true);
                 if (flag == false)
                 {
-                    Instantiate(listObject[6], this.transform);
+                    Instantiate(listObject[6], spawner.transform);
                     flag = true;
                 }
             }
@@ -51,7 +56,7 @@ public class Crafting : MonoBehaviour
                 particleWeapon.SetActive(true);
                 if (flag == false)
                 {
-                    Instantiate(listObject[0], this.transform);
+                    Instantiate(listObject[0], spawner.transform);
                     flag = true;
                 }
             }
@@ -61,7 +66,7 @@ public class Crafting : MonoBehaviour
                 particleWeapon.SetActive(true);
                 if (flag == false)
                 {
-                    Instantiate(listObject[2], this.transform);
+                    Instantiate(listObject[2], spawner.transform);
                     flag = true;
 
                 }
@@ -75,7 +80,7 @@ public class Crafting : MonoBehaviour
                 particleWeapon.SetActive(true);
                 if (flag == false)
                 {
-                    Instantiate(listObject[3], this.transform);
+                    Instantiate(listObject[3], spawner.transform);
                     flag = true;
                  }
              }
@@ -85,7 +90,7 @@ public class Crafting : MonoBehaviour
                 particleWeapon.SetActive(true);
                 if (flag == false)
                 {
-                    Instantiate(listObject[1], this.transform);
+                    Instantiate(listObject[1], spawner.transform);
                     flag = true;
                 }
             }
@@ -96,7 +101,7 @@ public class Crafting : MonoBehaviour
             particleWeapon.SetActive(true);
             if (flag == false)
             {
-                Instantiate(listObject[5], this.transform);
+                Instantiate(listObject[5], spawner.transform);
                 flag = true;
             }
         }

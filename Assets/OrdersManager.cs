@@ -32,46 +32,46 @@ public class OrdersManager : MonoBehaviour
                 outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 0;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
 
                 outlinedSnapZone[3].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = Color.gray;
-                outlinedSnapZone[5].GetComponent<Outline>().OutlineColor = Color.yellow;
+                outlinedSnapZone[5].GetComponent<Outline>().OutlineColor =  new Color(255, 244, 0);
             }
             if (currentObject.tag == "Shield")
             {
                 outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 0;
+                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
 
                 outlinedSnapZone[1].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[3].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
-                outlinedSnapZone[5].GetComponent<Outline>().OutlineColor = Color.yellow;
-                outlinedSnapZone[7].GetComponent<Outline>().OutlineColor = Color.yellow;
+                outlinedSnapZone[5].GetComponent<Outline>().OutlineColor =  new Color(255, 244, 0);
+                outlinedSnapZone[7].GetComponent<Outline>().OutlineColor =  new Color(255, 244, 0);
             }
             if (currentObject.tag == "Helmet")
             {
-                outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 0;
+                outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
 
                 outlinedSnapZone[0].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
                 outlinedSnapZone[3].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
@@ -82,51 +82,51 @@ public class OrdersManager : MonoBehaviour
             if (currentObject.tag == "Boots")
             {
                 outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
 
                 outlinedSnapZone[1].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
                 outlinedSnapZone[7].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineColor = Color.gray;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineColor = Color.gray;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = Color.gray;
             }
             if (currentObject.tag == "Pants")
             {
-                outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
 
                 outlinedSnapZone[1].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[7].GetComponent<Outline>().OutlineColor = Color.gray;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineColor = Color.gray;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[0].GetComponent<Outline>().OutlineColor = Color.green;
                 outlinedSnapZone[6].GetComponent<Outline>().OutlineColor = Color.green;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineColor = Color.yellow;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineColor =  new Color(255, 244, 0);
             }
             if (currentObject.tag == "Chestplate")
             {
                 outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
 
                 outlinedSnapZone[3].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = Color.blue;
@@ -134,19 +134,19 @@ public class OrdersManager : MonoBehaviour
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[5].GetComponent<Outline>().OutlineColor = Color.gray;
                 outlinedSnapZone[7].GetComponent<Outline>().OutlineColor = Color.gray;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineColor = Color.gray;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = Color.gray;
             }
             if (currentObject.tag == "MagicStaff")
             {
-                outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[0].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[1].GetComponent<Outline>().OutlineWidth = 0;
                 outlinedSnapZone[2].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 8;
-                outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 8;
+                outlinedSnapZone[3].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[5].GetComponent<Outline>().OutlineWidth = 4;
+                outlinedSnapZone[6].GetComponent<Outline>().OutlineWidth = 4;
                 outlinedSnapZone[7].GetComponent<Outline>().OutlineWidth = 0;
-                outlinedSnapZone[8].GetComponent<Outline>().OutlineWidth = 0;
+                outlinedSnapZone[4].GetComponent<Outline>().OutlineWidth = 0;
 
                 outlinedSnapZone[3].GetComponent<Outline>().OutlineColor = Color.blue;
                 outlinedSnapZone[4].GetComponent<Outline>().OutlineColor = new Color(255, 153, 0);
@@ -171,6 +171,7 @@ public class OrdersManager : MonoBehaviour
     {
         if(other.tag == gameObjects[currentOrder].tag)
         {
+            GetComponent<Tutorial>().TutorialFinished();
             Debug.Log("ojbet bon");
             score += 1;
             Destroy(other.gameObject    );

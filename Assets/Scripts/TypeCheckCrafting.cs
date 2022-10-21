@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TypeCheckCrafting : MonoBehaviour
 {
+    [SerializeField] private GameObject gameManager;
     private int[] flag = new int[9];
     private void Start()
     {
@@ -24,7 +25,7 @@ public class TypeCheckCrafting : MonoBehaviour
             foreach (int value in flag)
             {
                 if (this.name == "Case" + flag[value])
-                    transform.parent.GetComponent<Crafting>().TypeOfCase(value, "Gold");
+                    gameManager.GetComponent<Crafting>().TypeOfCase(value, "Gold");
             }
         }
         else if (other.tag == "Iron")
@@ -32,7 +33,7 @@ public class TypeCheckCrafting : MonoBehaviour
             foreach (int value in flag)
             {
                 if (this.name == "Case" + flag[value])
-                    transform.parent.GetComponent<Crafting>().TypeOfCase(value, "Iron");
+                    gameManager.GetComponent<Crafting>().TypeOfCase(value, "Iron");
             }
         }
         else if (other.tag == "Copper")
@@ -40,7 +41,7 @@ public class TypeCheckCrafting : MonoBehaviour
             foreach (int value in flag)
             {
                 if (this.name == "Case" + flag[value])
-                    transform.parent.GetComponent<Crafting>().TypeOfCase(value, "Copper");
+                    gameManager.GetComponent<Crafting>().TypeOfCase(value, "Copper");
             }
         }
         else if (other.tag == "Emerald")
@@ -48,7 +49,7 @@ public class TypeCheckCrafting : MonoBehaviour
             foreach (int value in flag)
             {
                 if (this.name == "Case" + flag[value])
-                    transform.parent.GetComponent<Crafting>().TypeOfCase(value, "Emerald");
+                    gameManager.GetComponent<Crafting>().TypeOfCase(value, "Emerald");
             }
         }
         else if (other.tag == "BlueCrystal")
@@ -56,7 +57,7 @@ public class TypeCheckCrafting : MonoBehaviour
             foreach (int value in flag)
             {
                 if (this.name == "Case" + flag[value])
-                    transform.parent.GetComponent<Crafting>().TypeOfCase(value, "BlueCrystal");
+                    gameManager.GetComponent<Crafting>().TypeOfCase(value, "BlueCrystal");
             }
         }
     }
@@ -65,7 +66,7 @@ public class TypeCheckCrafting : MonoBehaviour
         foreach (int value in flag)
         {
             if (this.name == "Case" + flag[value])
-                transform.parent.GetComponent<Crafting>().TypeOfCase(value, "");
+                gameManager.GetComponent<Crafting>().TypeOfCase(value, "");
         }
     }
 }

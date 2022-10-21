@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     [SerializeField] private List<GameObject> gameObjects = new List<GameObject>();
+    private bool firstCall = false;
     void Start()
     {
         if( gameObjects.Count >= 3)
@@ -22,8 +23,14 @@ public class Tutorial : MonoBehaviour
     }
     public void SecondStepFinished()
     {
-        gameObjects[1].SetActive(false);
-        gameObjects[2].SetActive(true);
+        if(firstCall == false)
+        {
+            gameObjects[1].SetActive(false);
+            gameObjects[2].SetActive(true);
+            firstCall = true;
+
+        }
+
     }
     public void TutorialFinished()
     {
