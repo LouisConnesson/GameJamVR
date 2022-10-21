@@ -9,6 +9,13 @@ TagManager:
   - Copper
   - Emerald
   - BlueCrystal
+  - Sword
+  - Shield
+  - Helmet
+  - Pants
+  - Chestplate
+  - MagicStaff
+  - Boots
   layers:
   - Default
   - TransparentFX
@@ -16,7 +23,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - DoNotGrab
   - 
   - 
   - 
